@@ -52,9 +52,13 @@ public class Update extends ExtendM3Transaction {
         changeRecord();
     }
   
+  
     /**
-    * updates record in the CINACC table
+    * Updates record in the CINACC table.
+    * by updating the account number, sequence number and error type value.
     *
+    * @param  null
+    * @return void
     */
     private void changeRecord() {
         DBAction query = database.table("CINACC").index("00").selection("EZCONO", "EZDIVI", "EZANBR", "EZSENO", "EZERCD").build();
